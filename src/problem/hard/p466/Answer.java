@@ -1,5 +1,9 @@
 package problem.hard.p466;
 
+/**
+ * 466. 统计重复个数
+ * https://leetcode-cn.com/problems/count-the-repetitions/
+ */
 public class Answer {
     public static void main(String[] args) {
         System.out.println(new Solution().getMaxRepetitions(
