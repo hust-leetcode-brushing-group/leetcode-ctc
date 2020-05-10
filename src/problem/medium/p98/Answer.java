@@ -1,5 +1,7 @@
 package problem.medium.p98;
 
+import common.TreeNode;
+
 public class Answer {
 }
 
@@ -7,15 +9,16 @@ public class Answer {
  * 98. 验证二叉搜索树
  * https://leetcode-cn.com/problems/validate-binary-search-tree/
  */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
-    }
-}
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 
 /**
  * @author caoPhoenix

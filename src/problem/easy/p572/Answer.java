@@ -1,5 +1,7 @@
 package problem.easy.p572;
 
+import common.TreeNode;
+
 /**
  * 572. 另一个树的子树
  * https://leetcode-cn.com/problems/subtree-of-another-tree/
@@ -12,15 +14,15 @@ public class Answer {
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
 
 /**
  * @author caoPhoenix
