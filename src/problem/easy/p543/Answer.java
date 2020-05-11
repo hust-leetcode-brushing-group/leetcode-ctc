@@ -10,8 +10,8 @@ public class Answer {
 }
 
 class MyNode {
-    int depth;
-    TreeNode longest;
+    int depth;  // 当前节点的最大深度
+    TreeNode longest;   // 当前节点的最深叶子
 
     public MyNode(int depth, TreeNode longest) {
         this.depth = depth;
