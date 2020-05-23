@@ -9,7 +9,7 @@ import java.util.Map;
  */
 public class Answer {
     public static void main(String[] args) {
-        System.out.println(new Solution().lengthOfLongestSubstring("bdfgbdfgh"));
+        System.out.println(new Solution().lengthOfLongestSubstring("abcad"));
     }
 }
 
@@ -19,7 +19,7 @@ public class Answer {
  * 执行用时 : 7 ms , 在所有 Java 提交中击败了 82.77% 的用户
  * 内存消耗 : 40.4 MB , 在所有 Java 提交中击败了 5.20% 的用户
  *
- * 滑动窗口，理论上是 O(n)。
+ * 【滑动窗口】 理论上是 O(n)。
  * 实际上应该把start前边的部分删除才对，但是删除的过程又需要O(n)
  */
 class Solution {
@@ -31,7 +31,7 @@ class Solution {
 
         for (int i = 0; i < chs.length; i++) {
             if (map.containsKey(chs[i]) && map.get(chs[i]) >= start) {
-                start = i;
+                start = map.get(chs[i]) + 1;
             }
             map.put(chs[i], i);
             max = max > (i - start + 1) ? max : (i - start + 1);
