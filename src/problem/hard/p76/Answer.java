@@ -45,14 +45,14 @@ class Solution {
             // 窗口右端右移
             char c = chs[right++];
 
-            // 更新窗口
+            // **1. 更新窗口
             if (need.containsKey(c)) {
                 window.put(c, window.getOrDefault(c, 0) + 1);
                 // Integer 不应直接 ==，有缓存问题
                 if (window.get(c).equals(need.get(c))) valid++;
             }
 
-            // 满足条件时收缩左窗口
+            // **2. 满足条件时收缩左窗口
             while (valid == need.size()) {
                 // 满足条件时计算最小长度
                 if (len > right - left) {
@@ -61,6 +61,8 @@ class Solution {
                 }
                 // 左端右移
                 char d = chs[left++];
+
+                // **3. 更新窗口
                 if (window.containsKey(d)) {
                     // 如果 window 内 d 出现的次数刚好和 need 的次数相等，
                     // 由于次数需要减 1，故 valid 减 1
