@@ -23,7 +23,8 @@ public class Answer {
  * 执行用时 :35 ms, 在所有 Java 提交中击败了37.50% 的用户
  * 内存消耗 :40.7 MB, 在所有 Java 提交中击败了5.88%的用户
  *
- * 滑动窗口。再次剽窃labuladong大佬的算法。。。。
+ * 【滑动窗口】
+ * 和 p76 同类型，再次剽窃labuladong大佬的算法。。。。
  */
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {

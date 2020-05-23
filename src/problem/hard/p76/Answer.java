@@ -21,6 +21,7 @@ public class Answer {
  * 执行用时 :18 ms, 在所有 Java 提交中击败了54.70% 的用户
  * 内存消耗 :40.2 MB, 在所有 Java 提交中击败了13.33%的用户
  *
+ * 【滑动窗口】
  * 本来写了个不考虑 t 中重复字符的，用 set 来存，结果被题目坑了
  * 然后就看了看 labuladong 大佬的题解：
  * https://leetcode-cn.com/problems/minimum-window-substring/solution/hua-dong-chuang-kou-suan-fa-tong-yong-si-xiang-by-/
