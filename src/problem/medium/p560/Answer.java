@@ -74,7 +74,7 @@ class Solution_1 {
  * 执行用时 :28 ms, 在所有 Java 提交中击败了52.96% 的用户
  * 内存消耗 :40.1 MB, 在所有 Java 提交中击败了11.54%的用户
  *
- * 使用 hash 表来优化“检索满足条件的 j 的个数”这个过程
+ * 【前缀和】使用 hash 表来优化“检索满足条件的 j 的个数”这个过程
  */
 class Solution_2 {
     public int subarraySum(int[] nums, int k) {
