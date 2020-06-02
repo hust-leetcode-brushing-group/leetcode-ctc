@@ -1,10 +1,10 @@
-package interview.medium;
+package interview.medium.i56_i;
 
 /**
  * 面试题56 - I. 数组中数字出现的次数
  * https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
  */
-public class i56_1 {
+public class Answer {
 }
 
 /**
