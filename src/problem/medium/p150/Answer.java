@@ -21,7 +21,7 @@ public class Answer {
 class Solution {
     public int evalRPN(String[] tokens) {
         //Stack<Integer> si = new Stack<Integer>();	//Stack继承自Vector，效率不高
-        Deque<Integer> si = new ArrayDeque<>();	// 官方建议用ArrayList来使用栈?ArrayDeque
+        Deque<Integer> si = new ArrayDeque<>();	// 官方建议用Deque的实现类来使用栈
         for (int i = 0; i < tokens.length; i++) {
             String s = tokens[i];
             if (s.equals("+")) {

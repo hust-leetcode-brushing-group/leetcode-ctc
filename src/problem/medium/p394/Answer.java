@@ -1,7 +1,5 @@
 package problem.medium.p394;
 
-import sun.awt.image.ImageWatched;
-
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

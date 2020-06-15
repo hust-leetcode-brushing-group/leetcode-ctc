@@ -1,11 +1,17 @@
 package problem.medium.p739;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
+/**
+ * 739. 每日温度
+ * https://leetcode-cn.com/problems/daily-temperatures/
+ */
 public class Answer {
     public static void main(String[] args) {
-        int[] temperatures = {34,80,80,34,34,80,80,80,80,34};
-        System.out.println(Arrays.toString(new Solution().dailyTemperatures(temperatures)));
+        int[] temperatures = {34, 80, 80, 34, 34, 80, 80, 80, 80, 34};
+        System.out.println(Arrays.toString(new Solution_1().dailyTemperatures(temperatures)));
     }
 }
 
@@ -38,6 +44,25 @@ class Solution {
     }
 }
 
-/*
-TODO 单调栈
+/**
+ * @author caoPhoenix
+ * @date 2020/6/15
+ * 执行用时 :16 ms, 在所有 Java 提交中击败了81.24% 的用户
+ * 内存消耗 :47.6 MB, 在所有 Java 提交中击败了6.45%的用户
+ * 【单调栈】，专门解决【Next Greater Number】问题。感谢labuladong大佬的讲解
  */
+class Solution_1 {
+    public int[] dailyTemperatures(int[] T) {
+        int[] result = new int[T.length];
+        Deque<Integer> stack = new ArrayDeque<>();
+        for (int i = T.length - 1; i >= 0; i--) {
+            while (!stack.isEmpty() && T[stack.peek()] <= T[i]) {
+                stack.pop();
+            }
+            // 此时栈顶即 i 之后的第一个比它高的元素的下标
+            result[i] = stack.isEmpty() ? 0 : stack.peek() - i;
+            stack.push(i);
+        }
+        return result;
+    }
+}
