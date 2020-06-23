@@ -1,5 +1,9 @@
 package problem.easy.p67;
 
+/**
+ * 67. 二进制求和
+ * https://leetcode-cn.com/problems/add-binary/
+ */
 public class Answer {
 }
 
