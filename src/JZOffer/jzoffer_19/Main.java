@@ -25,7 +25,7 @@ class Solution {
         int s_len = s.length(), p_len = p.length();
         boolean[][] dp = new boolean[s_len + 1][p_len + 1];
         // 初始条件
-        // dp[0][j] = dp[i][0] = false;
+        // dp[i][0] = false;
         dp[0][0] = true;
         for (int j = 1; j < p_len; j++) {
             if (p.charAt(j) == '*') dp[0][j + 1] = dp[0][j - 1];
