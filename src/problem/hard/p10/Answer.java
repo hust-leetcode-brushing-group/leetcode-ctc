@@ -11,30 +11,39 @@ public class Answer {
 }
 
 /**
- * TODO
- * 这鬼题太麻烦了
+ * @author caoPhoenix
+ * @date 2020/8/20
+ * 执行用时：5 ms, 在所有 Java 提交中击败了70.88% 的用户
+ * 内存消耗：38.6 MB, 在所有 Java 提交中击败了36.04% 的用户
+ * 【动态规划】剑指offer.19
  */
 class Solution {
-    char[] chs_s;
-    char[] chs_p;
-
     public boolean isMatch(String s, String p) {
-        if (s == null && p == null) return true;
-        else if (s == null || p == null) return false;
-        chs_s = s.toCharArray();
-        chs_p = p.toCharArray();
-        return match(0, 0);
-    }
+        // s的前i个字母和p的前j个字母是否匹配
+        int s_len = s.length(), p_len = p.length();
+        boolean[][] dp = new boolean[s_len + 1][p_len + 1];
+        // 初始条件
+        // dp[0][j] = dp[i][0] = false;
+        dp[0][0] = true;
+        for (int j = 1; j < p_len; j++) {
+            if (p.charAt(j) == '*') dp[0][j + 1] = dp[0][j - 1];
+        }
 
-    private boolean match(int i_s, int i_p) {
-        if (i_p == chs_p.length && i_s == chs_s.length) return true;
-        if (i_p == chs_p.length - 1 && chs_p[i_p] == '*' && i_s == chs_s.length) return true;
-        if (i_p >= chs_p.length || i_s >= chs_s.length) return false;
-        if (chs_p[i_p] == '*')
-            return match(i_s, i_p - 1) || match(i_s, i_p + 1);
-        if (chs_p[i_p] == '.' || chs_p[i_p] == chs_s[i_s])
-            return match(i_s + 1, i_p + 1)
-                    || (i_p < chs_p.length - 1 && chs_p[i_p + 1] == '*' && match(i_s, i_p + 2));
-        else return chs_p[i_p + 1] == '*' && match(i_s, i_p + 2); // 当前匹配到不相等
+        // 递推
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < p.length(); j++) {
+                if (p.charAt(j) == s.charAt(i) || p.charAt(j) == '.') { // 匹配
+                    dp[i + 1][j + 1] = dp[i][j];
+                } else if (p.charAt(j) == '*' && j >= 1) { // 不匹配但 p[j] =
+                    // '*'，且按照p的模式应该有 j ≥ 1
+                    if (p.charAt(j - 1) == s.charAt(i) || p.charAt(j - 1) == '.') {
+                        dp[i + 1][j + 1] = dp[i][j + 1];
+                    }
+                    dp[i + 1][j + 1] |= dp[i + 1][j - 1];
+                }
+            }
+        }
+
+        return dp[s_len][p_len];
     }
 }
