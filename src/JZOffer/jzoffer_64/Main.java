@@ -1,10 +1,10 @@
-package interview.medium.i64;
+package JZOffer.jzoffer_64;
 
 /**
- * 面试题64. 求1+2+…+n
+ * 剑指 Offer 64. 求1+2+…+n
  * https://leetcode-cn.com/problems/qiu-12n-lcof/
  */
-public class Answer {
+public class Main {
     public static void main(String[] args) {
     }
 }

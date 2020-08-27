@@ -1,4 +1,4 @@
-package interview.i62;
+package JZOffer.jzoffer_62;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.List;
  * 面试题62. 圆圈中最后剩下的数字
  * https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/
  */
-public class Answer {
+public class Main {
     public static void main(String[] args) {
         System.out.println(new Solution().lastRemaining(3, 1));
 
@@ -39,6 +39,7 @@ class Solution {
 /**
  * 执行用时：7 ms
  * 内存消耗：36.6 MB
+ * 【约瑟夫环】数学解法
  */
 class Solution_2 {
     public int lastRemaining(int n, int m) {

@@ -1,13 +1,13 @@
-package interview.i13;
+package JZOffer.jzoffer_13;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * 面试题13. 机器人的运动范围
+ * 剑指 Offer 13. 机器人的运动范围
  * https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/
  */
-public class Answer {
+public class Main {
     public static void main(String[] args) {
         System.out.println(new Solution().movingCount(2, 3, 1));
     }

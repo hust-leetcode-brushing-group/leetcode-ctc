@@ -1,10 +1,10 @@
-package interview.medium.i56_i;
+package JZOffer.jzoffer_56_1;
 
 /**
- * 面试题56 - I. 数组中数字出现的次数
+ * 剑指 Offer 56 - I. 数组中数字出现的次数
  * https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/
  */
-public class Answer {
+public class Main {
 }
 
 /**

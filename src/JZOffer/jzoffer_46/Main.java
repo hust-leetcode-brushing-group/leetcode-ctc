@@ -1,10 +1,10 @@
-package interview.medium.i46;
+package JZOffer.jzoffer_46;
 
 /**
- * 面试题46. 把数字翻译成字符串
+ * 剑指 Offer 46. 把数字翻译成字符串
  * https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/
  */
-public class Answer {
+public class Main {
     public static void main(String[] args) {
         System.out.println(new Solution().translateNum(5025));
     }

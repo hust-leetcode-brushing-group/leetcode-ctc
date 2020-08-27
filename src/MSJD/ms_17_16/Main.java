@@ -1,10 +1,10 @@
-package interview.i1716;
+package MSJD.ms_17_16;
 
 /**
  * 面试题 17.16. 按摩师
  * https://leetcode-cn.com/problems/the-masseuse-lcci/
  */
-public class Answer {
+public class Main {
     public static void main(String[] args) {
         int[] nums = new int[]{2,1,1,3};
         System.out.println(new Solution().massage(nums));

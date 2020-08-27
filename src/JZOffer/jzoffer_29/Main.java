@@ -1,8 +1,12 @@
-package interview.easy.i29;
+package JZOffer.jzoffer_29;
 
 import java.util.Arrays;
 
-public class Answer {
+/**
+ * 剑指 Offer 29. 顺时针打印矩阵
+ * https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
+ */
+public class Main {
     public static void main(String[] args) {
         int[][] matrix = {
                 {1, 2, 3, 4},
